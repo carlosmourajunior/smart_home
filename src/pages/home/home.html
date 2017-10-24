@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Inatel EAD - Smart Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="ios-bulb-outline" item-start></ion-icon>
+          <ion-label>Led</ion-label>
+      <ion-toggle [(ngModel)]="led_model.checked" (ionChange)="change_led()"></ion-toggle>        
+    </ion-item>    
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="ios-cog-outline" item-start></ion-icon>
+          <ion-label>Relé</ion-label>
+      <ion-toggle  [(ngModel)]="rele_model.checked" (ionChange)="change_rele()"></ion-toggle>        
+    </ion-item>    
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="ios-thermometer-outline" item-start></ion-icon>
+      <ion-label>Temperatura: {{ temp }}</ion-label>      
+    </ion-item>    
+  </ion-card>
+  <ion-card>
+    <ion-item>
+      <ion-icon name="md-bulb" item-start></ion-icon>
+      <ion-label>Luminosidade: {{ lumi }}</ion-label>      
+    </ion-item>    
+  </ion-card>
+  <button ion-button full (click)="update()">Atualizar</button>  
+</ion-content>
